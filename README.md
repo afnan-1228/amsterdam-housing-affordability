@@ -34,17 +34,28 @@ Options: `python run.py --year 2023` (force a year), `--refresh` (re-download), 
 
 ## Results
 
-<!-- After running, paste the key lines from outputs/summary.md here and add the figures. -->
+Run on the **CBS 2024 table** (85984NED): 96 of Amsterdam's 110 districts have both a home value and an income figure. The 2025 and 2026 tables do not yet contain income data. Full table: [`outputs/amsterdam_district_affordability.csv`](outputs/amsterdam_district_affordability.csv) · summary: [`outputs/summary.md`](outputs/summary.md).
+
+| | Amsterdam as a whole |
+|---|---|
+| Average home value (WOZ) | EUR 498,000 |
+| Average income per income recipient | EUR 49,300 |
+| Price-to-income ratio | **10.1** |
+| Average home in first-year PhD salaries | **11.2 years** |
+| Correlation between district income and home value | 0.93 |
 
 ![Most and least affordable districts](figures/top_bottom_districts.png)
-![Income and home value](figures/income_vs_home_value.png)
-![Years of PhD salary](figures/phd_salary_years.png)
-![Affordability map](figures/affordability_map.png)
 
-**Key findings** (write three in your own words after running):
-1. …
-2. …
-3. …
+![Income and home value](figures/income_vs_home_value.png)
+
+![Years of PhD salary](figures/phd_salary_years.png)
+
+`python run.py` also draws an affordability map (`figures/affordability_map.png`) from PDOK district boundaries.
+
+**Key findings**
+1. **An average Amsterdam home costs about 10 years of a typical local income**, and about 11 years of a first-year PhD salary. 44 of 96 districts are above the city average.
+2. **The most affordable districts relative to income are in Zuidoost** (Amstel III/Bullewijk 5.1, Amsterdamse Poort 6.3, Nellestein 7.3). The least affordable are Kadoelen in Noord (12.9) and the historic centre: Grachtengordel-Zuid (12.4), Burgwallen-Oude Zijde (12.1) and Grachtengordel-West (12.0).
+3. **Expensive is not the same as unaffordable for residents.** Income and home value move closely together (r = 0.93): Willemspark homes average EUR 1.15 million, yet the ratio (9.9) is below the city average because local incomes are also very high. For a newcomer on a PhD salary the picture is different: only 16 districts have an average home value below 8 years of gross salary, and in Apollobuurt it is 27 years.
 
 ## Limitations
 
